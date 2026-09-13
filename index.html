@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f6f2" />
+    <meta name="description" content="A quiet space to put your thoughts into perspective. Two columns, just for you. Your writing stays in your browser." />
+    <title>left / right — a little room to think</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="navbar">
+        <a class="wordmark" href="./" aria-label="Left right home">left <span>/</span> right<span class="brand-dot" aria-hidden="true">.</span></a>
+        <span class="tagline">a little room to think</span>
+        <nav aria-label="Writing tools">
+          <button id="example-button" type="button" aria-pressed="false"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3.5" width="14" height="13" rx="2"/><path d="M10 3.5v13M5.5 7h2M5.5 10h2M12.5 7h2M12.5 10h2"/></svg><span id="example-label">See an example</span></button>
+          <span class="nav-divider" aria-hidden="true"></span>
+          <button id="help-button" type="button"><span class="help-icon" aria-hidden="true">?</span>How it works</button>
+        </nav>
+      </header>
+
+      <main class="workspace" aria-label="Your two-column writing space">
+        <section class="column thoughts" aria-labelledby="thoughts-title">
+          <div class="column-heading">
+            <div class="eyebrow"><span class="section-number">01</span> LET IT OUT</div>
+            <h1 id="thoughts-title">What’s on your mind?</h1>
+            <p>The worries. The what-ifs. The things going in circles.</p>
+          </div>
+          <div class="writing-area"><textarea id="thoughts" aria-label="What's on your mind?" placeholder="Start anywhere. No need to make it make sense." spellcheck="true"></textarea></div>
+          <div class="column-footer"><span class="tiny-dot" aria-hidden="true"></span> You don’t have to figure it all out at once.</div>
+        </section>
+
+        <div class="center-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></div>
+
+        <section class="column perspective" aria-labelledby="perspective-title">
+          <div class="column-heading">
+            <div class="eyebrow"><span class="section-number">02</span> MAKE A LITTLE SPACE</div>
+            <h2 id="perspective-title">What’s in your hands?</h2>
+            <p>A kinder perspective. A small next step. What you can let go.</p>
+          </div>
+          <div class="writing-area"><textarea id="perspective" aria-label="What's in your hands?" placeholder="What’s one small thing you can do, or remind yourself?" spellcheck="true"></textarea></div>
+          <div class="column-footer"><span class="tiny-dot" aria-hidden="true"></span> A small step is still a step.</div>
+        </section>
+      </main>
+
+      <footer class="privacy-footer"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="4" y="7" width="8" height="6" rx="1.5"/><path d="M5.5 7V4.5a2.5 2.5 0 0 1 5 0V7"/></svg><span id="storage-status" role="status">Only in this browser. Clear its storage, and these words disappear.</span><span id="example-status" role="status" hidden>Viewing an example. Your own writing is safely set aside.</span></footer>
+    </div>
+
+    <dialog id="help-dialog" aria-labelledby="help-title">
+      <div class="dialog-top"><span class="eyebrow">A MOMENT FOR YOURSELF</span><button id="close-help" class="close-button" aria-label="Close help" type="button">×</button></div>
+      <h2 id="help-title">Out of your head.<br>Onto the page.</h2>
+      <p>This is a simple two-column reflection exercise. There’s no right way to fill the page, and no need to finish it.</p>
+      <div class="help-step"><span class="section-number">01</span><p><strong>Give the thought somewhere to go.</strong><br>On the left, write down whatever is troubling you. A sentence, a list, a messy thought — all welcome.</p></div>
+      <div class="help-step"><span class="section-number">02</span><p><strong>Find a little perspective.</strong><br>On the right, respond with what you can control, one small action, or something kind and realistic to remind yourself. It’s okay if there’s nothing to solve right now.</p></div>
+      <div class="privacy-note"><strong>Your words stay with you.</strong><p>Your writing is saved automatically in this browser’s local storage. It isn’t sent to a server. Clearing this site’s browser storage deletes it; private browsing may remove it when the session ends. Anyone using this browser profile may be able to read it.</p><p>“See an example” temporarily shows sample writing without replacing yours. Choose “Back to my writing” to return.</p></div>
+      <button id="start-writing" class="primary-button" type="button">A little space sounds good <span aria-hidden="true">↗</span></button>
+    </dialog>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
